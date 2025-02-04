@@ -1,0 +1,27 @@
+{
+  "name": "mediswift_devjam_v1",
+  "version": "1.0.0",
+  "description": "Dev Jam Project by Team Cool Coders from MNNIT",
+  "homepage": "https://github.com/devansh-bajpai/mediswift_devJam_v1#readme",
+  "bugs": {
+    "url": "https://github.com/devansh-bajpai/mediswift_devJam_v1/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devansh-bajpai/mediswift_devJam_v1.git"
+  },
+  "license": "ISC",
+  "author": "Devansh Bajpai",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  }
+}
