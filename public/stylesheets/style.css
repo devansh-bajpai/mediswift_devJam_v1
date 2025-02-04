@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('medical background2.jpg');
+    background-image: url('/images/medicalBackgroundImage.jpg');
     background-size: cover;
 }
 
