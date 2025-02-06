@@ -106,3 +106,77 @@ body {
 #headerLogoImg {
     height: 60px;
 }
+
+
+
+/* added by nasim*/
+
+#footerDiv
+{
+    width:100%;
+    height:250px;
+
+    display:flex;
+    flex-direction:column;
+    background-color: rgba(0,0,0,0.201);
+    justify-content:center;
+    align-items:center;
+    border-spacing: space-between;
+
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.footerLinks {
+    text-decoration: none;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:8px;
+}
+
+#phoneImgLogo {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+#linkedinImg
+{
+    height:30px;
+    width:30px;
+    margin-right:10px;
+}
+#githubImg
+{
+    height:30px;
+    width:30px;
+    margin-right:10px;
+}
+
+#footerLinksTexts {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#footerLogoDiv {
+    width: 100%;
+    height: 100px; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#footerLogoImg {
+    height: 80px;
+    width: 80px;
+}
+
+#footerTagline {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin-left: 10px;
+}
