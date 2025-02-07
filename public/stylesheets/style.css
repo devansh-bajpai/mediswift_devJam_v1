@@ -180,3 +180,26 @@ body {
     color: white;
     margin-left: 10px;
 }
+
+#logoutAnchor {
+    /* background-color: pink; */
+    height: 50px;
+    width: 50px;
+    margin: 0px 5px 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logoutImg {
+    height: 28px;
+    width: 28px;
+}
+
+#welcomeText {
+    color: white;
+    font-family: "Josefin Sans";
+    font-size: 20px;
+    /* background-color: pink; */
+    width: 200px;
+}

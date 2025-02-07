@@ -300,3 +300,20 @@ p {
     color: white;
     margin-left: 10px;
 }
+
+
+/* Added by devansh (dynamic) */
+#dynamicErrors {
+    width: 100%;
+    margin-top: 10px;
+    /* background-color: red; */
+    color: rgb(255, 44, 44);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+
+.errorTexts {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: red;
+    font-size: 16px;
+}

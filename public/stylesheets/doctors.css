@@ -1,0 +1,385 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-image: url('/images/newBg.png');
+    background-size: cover;
+}
+
+#headerDiv {
+    height:70px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.201);
+    /* opacity: 30%; */
+    display: flex;
+}
+
+#headerLogoDiv {
+    height: 65px;
+    /* width: 100px; */
+    width: 6.5%;
+    /* background-color: pink; */
+    margin: 2.5px 0px 0px 5px;
+
+}
+
+#headerCentralDiv {
+    height: 65px;
+    /* width: 1200px; */
+    width: 78%;
+    /* background-color: pink; */
+    margin: 2.5px 0px 0px 5px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    padding-right: 100px;
+}
+
+#loginDiv {
+    height: 65px;
+    /* width: 220px; */
+    width: 15.5%;
+    /* background-color: pink; */
+    margin: 2.5px 0px 0px 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_signup_btn {
+    height: 50px;
+    /* width: 100px; */
+    width: 45%;
+    background-color: rgb(54, 138, 248);
+    border-radius: 7px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.headerCentralButtons {
+    /* height: 55px; */
+    width: 100px;
+    /* background-color: rgb(54, 138, 248); */
+    border-radius: 7px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px 10px 0px 10px;
+}
+
+#findDoctorButton {
+    width: 130px;
+    color: rgba(191, 255, 0, 0.727);
+
+}
+
+#headerLogoAnchor {
+    height: 65px;
+    width: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#headerLogoImg {
+    height: 60px;
+}
+
+
+
+/* added by nasim*/
+
+#footerDiv
+{
+    width:100%;
+    height:250px;
+
+    display:flex;
+    flex-direction:column;
+    background-color: rgba(0,0,0,0.201);
+    justify-content:center;
+    align-items:center;
+    border-spacing: space-between;
+
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.footerLinks {
+    text-decoration: none;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:8px;
+}
+
+#phoneImgLogo {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+#linkedinImg
+{
+    height:30px;
+    width:30px;
+    margin-right:10px;
+}
+#githubImg
+{
+    height:30px;
+    width:30px;
+    margin-right:10px;
+}
+
+#footerLinksTexts {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#footerLogoDiv {
+    width: 100%;
+    height: 100px; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#footerLogoImg {
+    height: 80px;
+    width: 80px;
+}
+
+#footerTagline {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin-left: 10px;
+}
+
+#logoutAnchor {
+    /* background-color: pink; */
+    height: 50px;
+    width: 50px;
+    margin: 0px 5px 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logoutImg {
+    height: 28px;
+    width: 28px;
+}
+
+#welcomeText {
+    color: white;
+    font-family: "Josefin Sans";
+    font-size: 20px;
+    /* background-color: pink; */
+    width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#bodyDiv {
+    width: 100%;
+    /* height: 500px; */
+    /* padding: 10px 50px 10px 50px; */
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+
+#searchBar {
+    height: 70px;
+    width: 900px;
+    /* background-color: blue; */
+
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchInput {
+    height: 50px;
+    width: 600px;
+    border-radius: 12px 0px 0px 12px;
+    outline: 0px;
+    padding: 0px 10px 0px 10px;
+
+    font-family: "Exo 2";
+    font-size: 18px;
+
+    border: 0px;
+
+}
+
+#searchButton {
+    height: 50px;
+    width: 64px;
+    border-radius: 0px 12px 12px 0px;
+
+    /* outline: none; */
+    border: 0px;
+    background-color: rgb(247, 220, 101);
+    transition: background-color 0.15s ease 0s;
+}
+
+#searchButton:hover {
+    background-color: rgb(255, 208, 0);
+}
+
+#searchButtonIcon {
+    font-size: 20px;
+}
+
+
+
+#cardsDiv {
+    /* height: 600px; */
+    width: 1100px;
+    /* background-color: pink; */
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.card {
+    margin: 10px;
+    /* background-color: blue; */
+    background-color: rgba(150, 137, 255, 0.566);
+    height: 320px;
+    width: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    border-radius: 8px;
+
+    transition: 0.3s ease-in 0s;
+}
+
+.card:hover {
+    background-color: rgba(151, 137, 255, 0.659);
+}
+
+.doctorImage {
+    height: 150px;
+    width: 150px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+.doctorName {
+    font-family: "Josefin Sans";
+    font-size: 18px;
+    color: white;
+}
+
+.doctorDetails {
+    font-family: "Exo 2";
+    font-size: 15px;
+    margin-top: 5px;
+    color: rgb(178, 237, 217);
+
+}
+
+.viewMoreButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 100px;
+    background-color: pink;
+
+    border-radius: 8px;
+    font-family: "Exo 2";
+    text-decoration: none;
+    margin-top: 10px;
+    color: rgb(97, 97, 97);
+    background-color: rgb(247, 220, 101);
+    transition: background-color 0.15s ease 0s;
+}
+
+.viewMoreButton:hover {
+    background-color: rgb(255, 208, 0);
+}
+
+#clearFilterButton {
+    height: 50px;
+    width: 104px;
+    border-radius: 7px 7px 7px 7px;
+
+    margin-top: 5px;
+    /* outline: none; */
+    border: 0px;
+    background-color: rgb(247, 220, 101);
+    transition: background-color 0.15s ease 0s;
+
+    font-family: "Exo 2";
+
+    display: none;
+}
+
+#clearFilterButton:hover {
+    background-color: rgb(255, 208, 0);
+}
+
+#noResultText {
+    font-size: 40px;
+    color: white;
+    font-family: "Exo 2";
+    display: none;
+}
+
+#noData {
+    font-size: 30px;
+    color: white;
+    font-family: "Exo 2";
+}

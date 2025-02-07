@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediswift: List of Doctors</title>
+    <link rel="stylesheet" href="/stylesheets/doctors.css">
+
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <div id="headerDiv">
+
+        <div id="headerLogoDiv">
+            <a href="/" id="headerLogoAnchor">
+                <img src="/images/logo.png" alt="" id="headerLogoImg">
+            </a>
+        </div>
+
+        <div id="headerCentralDiv">
+            <a href="" class="headerCentralButtons">Pharmacy</a>
+            <a href="/book" class="headerCentralButtons" id="findDoctorButton">Find a Doctor</a>
+        </div>
+        
+        <div id="loginDiv">
+            <%if(firstName != ''){%>
+                <h3 id="welcomeText">Welcome, <%=firstName%></h3>
+                <a href="/logout" id="logoutAnchor">
+                    <img src="/images/logoutIcon.png" alt="" id="logoutImg">
+                </a>
+                <%}else{%>
+                    <a href="/login" class="login_signup_btn">Login</a>
+                    <a href="/signup" class="login_signup_btn">Sign Up</a>
+                    <%}%>
+        </div>
+
+    </div>
+
+    <div id="bodyDiv">
+
+        <div id="searchBar">
+            <input type="text" name="" id="searchInput" placeholder="Enter City">
+            <button id="searchButton"><i class="fa-solid fa-magnifying-glass" id="searchButtonIcon"></i></button>
+        </div>
+        <button id="clearFilterButton"><i class="fa-solid fa-eraser"></i> Clear Filter</button>
+        
+        <div id="cardsDiv">
+
+            <%for (data of doctorData){%>
+                <div class="card">
+                    <img src="/images/devanshImg.png" alt="" class="doctorImage">
+                    <h5 class="doctorName">Dr. <%=data["name"]%></h5>
+                    <h6 class="doctorDetails"><%=data["institute"]%></h6>
+                    <h6 class="doctorDetails"><%=data["field"]%></h6>
+                    <h6 class="doctorDetails" id="doctorCity"><%=data["city"]%></h6>
+                    <a href="" class="viewMoreButton">View More</a>
+                </div>
+                <%}%>
+                <%if(doctorData.length == 0){%>
+                    <h3 id="noData">No Data to Show.</h3>
+                    <%}%>
+                <h3 id="noResultText">No Result Found.</h3>
+
+            <!-- <div class="card">
+                <img src="/images/devanshImg.png" alt="" class="doctorImage">
+                <h5 class="doctorName">Dr. Devansh Bajpai</h5>
+                <h6 class="doctorDetails">AIIMS Dholakpur</h6>
+                <h6 class="doctorDetails">Jholachaap</h6>
+                <h6 class="doctorDetails">Kanpur</h6>
+                <a href="" class="viewMoreButton">View More</a>
+            </div>
+
+            <div class="card">
+                <img src="/images/dhruvImg.png" alt="" class="doctorImage">
+                <h5 class="doctorName">Dr. Dhruv Mishra</h5>
+                <h6 class="doctorDetails">AIIMS Delhi</h6>
+                <h6 class="doctorDetails">Surgeon</h6>
+                <h6 class="doctorDetails">Allahabad</h6>
+                <a href="" class="viewMoreButton">View More</a>
+            </div>
+            <div class="card">
+                <img src="/images/adityaImg.jpg" alt="" class="doctorImage">
+                <h5 class="doctorName">Dr. Aditya Kanodia</h5>
+                <h6 class="doctorDetails">AIIMS Patna</h6>
+                <h6 class="doctorDetails">Neurologist</h6>
+                <h6 class="doctorDetails">Kanpur</h6>
+                <a href="" class="viewMoreButton">View More</a>
+            </div>
+            <div class="card">
+                <img src="/images/nasimImg.png" alt="" class="doctorImage">
+                <h5 class="doctorName">Dr. Nasim Ahmed</h5>
+                <h6 class="doctorDetails">AIIMS Bhopal</h6>
+                <h6 class="doctorDetails">Cardiologist</h6>
+                <h6 class="doctorDetails">Bhopal</h6>
+                <a href="" class="viewMoreButton">View More</a>
+            </div> -->
+            
+
+
+        </div>
+
+    </div>
+
+
+    <div id="footerDiv">
+        <a href="" class="footerLinks">
+            <img src="/images/phoneImg.png" alt="" id="phoneImgLogo">
+            <h6 class="footerLinksTexts">Contact Us</h6></a>
+        <a href="" class="footerLinks"><img src="/images/linkedinImg.png" id="linkedinImg">
+            <h6 class="footerLinksTexts">Linked In</h6></a>
+        <a href="" class="footerLinks"><img src="/images/githubLogoImg.png" id="githubImg">
+            <h6 class="footerLinksTexts">GitHub</h6></a>
+        
+
+            <div id="footerLogoDiv">
+                <img src="/images/logo.png" alt="" id="footerLogoImg">
+                <h4 id="footerTagline">Your Medical Assistant</h4>
+            </div>
+    </div>
+
+    <script src="/javascripts/doctorScript.js"></script>
+</body>
+</html>

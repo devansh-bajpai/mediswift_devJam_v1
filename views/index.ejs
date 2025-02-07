@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
 
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+
     
 </head>
 <body>
@@ -20,12 +27,19 @@
 
         <div id="headerCentralDiv">
             <a href="" class="headerCentralButtons">Pharmacy</a>
-            <a href="" class="headerCentralButtons" id="findDoctorButton">Find a Doctor</a>
+            <a href="/book" class="headerCentralButtons" id="findDoctorButton">Find a Doctor</a>
         </div>
-
+        
         <div id="loginDiv">
-            <a href="/login" class="login_signup_btn">Login</a>
-            <a href="/signup" class="login_signup_btn">Sign Up</a>
+            <%if(firstName != ''){%>
+                <h3 id="welcomeText">Welcome, <%=firstName%></h3>
+                <a href="/logout" id="logoutAnchor">
+                    <img src="/images/logoutIcon.png" alt="" id="logoutImg">
+                </a>
+                <%}else{%>
+                    <a href="/login" class="login_signup_btn">Login</a>
+                    <a href="/signup" class="login_signup_btn">Sign Up</a>
+                    <%}%>
         </div>
 
     </div>
