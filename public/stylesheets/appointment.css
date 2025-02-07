@@ -1,0 +1,356 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+
+
+body {
+    background-image: url('/images/newBg.png');
+    background-size: cover;
+}
+
+#headerDiv {
+    height:70px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.201);
+    /* opacity: 30%; */
+    display: flex;
+}
+
+#headerLogoDiv {
+    height: 65px;
+    /* width: 100px; */
+    width: 6.5%;
+    /* background-color: pink; */
+    margin: 2.5px 0px 0px 5px;
+
+}
+
+#headerCentralDiv {
+    height: 65px;
+    /* width: 1200px; */
+    width: 78%;
+    /* background-color: pink; */
+    margin: 2.5px 0px 0px 5px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    padding-right: 100px;
+}
+
+#loginDiv {
+    height: 65px;
+    /* width: 220px; */
+    width: 15.5%;
+    /* background-color: pink; */
+    margin: 2.5px 0px 0px 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_signup_btn {
+    height: 50px;
+    /* width: 100px; */
+    width: 45%;
+    background-color: rgb(54, 138, 248);
+    border-radius: 7px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.headerCentralButtons {
+    /* height: 55px; */
+    width: 100px;
+    /* background-color: rgb(54, 138, 248); */
+    border-radius: 7px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px 10px 0px 10px;
+}
+
+#findDoctorButton {
+    width: 130px;
+
+}
+
+#headerLogoAnchor {
+    height: 65px;
+    width: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#headerLogoImg {
+    height: 60px;
+}
+
+
+
+/* added by nasim*/
+
+#footerDiv
+{
+    width:100%;
+    height:250px;
+
+    display:flex;
+    flex-direction:column;
+    background-color: rgba(0,0,0,0.201);
+    justify-content:center;
+    align-items:center;
+    border-spacing: space-between;
+
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.footerLinks {
+    text-decoration: none;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:8px;
+}
+
+#phoneImgLogo {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+#linkedinImg
+{
+    height:30px;
+    width:30px;
+    margin-right:10px;
+}
+#githubImg
+{
+    height:30px;
+    width:30px;
+    margin-right:10px;
+}
+
+#footerLinksTexts {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#footerLogoDiv {
+    width: 100%;
+    height: 100px; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#footerLogoImg {
+    height: 80px;
+    width: 80px;
+}
+
+#footerTagline {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin-left: 10px;
+}
+
+#logoutAnchor {
+    /* background-color: pink; */
+    height: 50px;
+    width: 50px;
+    margin: 0px 5px 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logoutImg {
+    height: 28px;
+    width: 28px;
+}
+
+#welcomeText {
+    color: white;
+    font-family: "Josefin Sans";
+    font-size: 20px;
+    /* background-color: pink; */
+    width: 200px;
+}
+
+
+
+#bodyDiv {
+    background-color: rgba(255, 249, 192, 0.223);
+    /* height: 300px; */
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#doctorImageMain {
+    height: 200px;
+    width: 200px;
+    border-radius: 8px;
+}
+
+#contentDiv {
+    margin-left: 20px;
+    /* background-color: rgba(64, 0, 255, 0.225); */
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 6px rgba(0,0,0, 0.1);
+    /* height: 200px; */
+    margin: 50px;
+    padding: 10px;
+    width: 400px;
+
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.doctorTextMain {
+    font-family: "Exo 2";
+    color: white;
+}
+
+#doctorDataMain {
+    /* background-color: green; */
+    height: 150px;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.doctorPointsMain {
+    width: 50%;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+#imageDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#doctorNameMain {
+    font-size: 20px;
+    color: rgb(202, 202, 202);
+}
+
+#appointmentForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: pink; */
+    width: 100%;
+    /* height: 500px; */
+}
+
+#patientName {
+    height: 50px;
+    width: 90%;
+    border-radius: 8px;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    outline: none;
+    margin: 1px;
+}
+
+#patientAge {
+    height: 50px;
+    width: 90%;
+    border-radius: 8px;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    outline: none;
+    margin: 1px;
+}
+
+#patientGender {
+    height: 50px;
+    width: 95%;
+    border-radius: 8px;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    outline: none;
+    margin: 1px;
+}
+
+#patientDesc {
+    height: 100px;
+    width: 90%;
+    border-radius: 8px;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    outline: none;
+    margin: 1px;
+}
+
+.timeslotsLabels {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.timeslots {
+    margin-left: 5px;
+    margin: 5px;
+}
+
+#bookButton {
+    height: 50px;
+    width: 100px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 5px;
+
+    background-color: rgb(247, 220, 101);
+    transition: background-color 0.15s ease 0s;
+}
+
+#bookButton:hover {
+    background-color: rgb(255, 208, 0);
+}

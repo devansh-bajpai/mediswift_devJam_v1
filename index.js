@@ -168,7 +168,7 @@ app.get('/book', async(req, res) => {
         let firstName = userData.name.split(' ')[0];
         // console.log(firstName);
         let doctorData =  await doctor.find();
-
+        // console.log(doctorData);
         // console.log(doctorData.length);
         // console.log(doctorData[0]);
         
@@ -191,5 +191,51 @@ app.get('/signup/doctor', (req, res) => {
     res.cookie('token', '');
     res.render('doctorSignup');
 })
+
+app.get('/view/profile/:id',async (req, res) => {
+    try {
+        const decoded = jwt.verify(req.cookies.token, "testKey");
+        let userData = await user.findOne({email: decoded['email']});
+        let firstName = userData.name.split(' ')[0];
+
+        let doctorData = await doctor.findOne({_id: req.params.id});
+
+        res.render('doctorProfile', {firstName, doctorData});
+    } catch (err) {
+        res.redirect('/login');
+    }
+})
+
+app.get('/book/doctor/:id', async(req, res) => {
+
+    try {
+        const decoded = jwt.verify(req.cookies.token, "testKey");
+        let userData = await user.findOne({email: decoded['email']});
+        let firstName = userData.name.split(' ')[0];
+
+        let doctorData = await doctor.findOne({_id: req.params.id});
+
+        // let doctorData =  await doctor.find();
+        // console.log(doctorData);
+        // console.log(doctorData.length);
+        // console.log(doctorData[0]);
+        
+        // for(x of doctorData){
+        //     console.log(x.name);
+        // }
+
+        res.render('appointment', {firstName, doctorData});
+    } catch (err) {
+        // console.error("Invalid token", err);
+        // res.redirect('/');
+
+        // res.render('doctors', {firstName: ""});
+        res.redirect('/login');
+    }
+
+
+
+})
+
 
 app.listen(3000);

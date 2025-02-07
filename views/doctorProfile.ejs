@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediswift: Home</title>
+    <link rel="stylesheet" href="/stylesheets/doctorProfile.css">
+
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+
+    
+</head>
+<body>
+    <div id="headerDiv">
+
+        <div id="headerLogoDiv">
+            <a href="/" id="headerLogoAnchor">
+                <img src="/images/logo.png" alt="" id="headerLogoImg">
+            </a>
+        </div>
+
+        <div id="headerCentralDiv">
+            <a href="" class="headerCentralButtons">Pharmacy</a>
+            <a href="/book" class="headerCentralButtons" id="findDoctorButton">Find a Doctor</a>
+        </div>
+        
+        <div id="loginDiv">
+            <%if(firstName != ''){%>
+                <h3 id="welcomeText">Welcome, <%=firstName%></h3>
+                <a href="/logout" id="logoutAnchor">
+                    <img src="/images/logoutIcon.png" alt="" id="logoutImg">
+                </a>
+                <%}else{%>
+                    <a href="/login" class="login_signup_btn">Login</a>
+                    <a href="/signup" class="login_signup_btn">Sign Up</a>
+                    <%}%>
+        </div>
+
+    </div>
+
+    <div id="bodyDiv">
+        <div id="imageDiv">
+            <img src="/images/dhruvImg.png" alt="" id="doctorImageMain">
+        </div>
+        <div id="contentDiv">
+            <h2 id="doctorNameMain" class="doctorTextMain"><%=doctorData["name"]%></h2>
+            <!-- name institute field city experience years language profule image brrief -->
+
+            <div id="doctorDataMain">
+                <div class="doctorPointsMain">Speciality:</div>
+                <div class="doctorPointsMain"><%=doctorData["field"]%></div>
+                <div class="doctorPointsMain">Language:</div>
+                <div class="doctorPointsMain"><%=doctorData["language"]%></div>
+                <div class="doctorPointsMain">Experience:</div>
+                <div class="doctorPointsMain"><%=doctorData["experience"]%></div>
+                <div class="doctorPointsMain">City:</div>
+                <div class="doctorPointsMain"><%=doctorData["city"]%></div>
+                <div class="doctorPointsMain">Education:</div>
+                <div class="doctorPointsMain"><%=doctorData["institute"]%></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="bookingDiv">
+        <a href="/book/doctor/<%=doctorData["_id"]%>" id="appointmentButton">Book Appointment</a>
+            <a href="" id="consultancyButton">Online Consultancy</a>
+    </div>
+
+
+
+    <div id="footerDiv">
+        <a href="" class="footerLinks">
+            <img src="/images/phoneImg.png" alt="" id="phoneImgLogo">
+            <h6 class="footerLinksTexts">Contact Us</h6></a>
+        <a href="" class="footerLinks"><img src="/images/linkedinImg.png" id="linkedinImg">
+            <h6 class="footerLinksTexts">Linked In</h6></a>
+        <a href="" class="footerLinks"><img src="/images/githubLogoImg.png" id="githubImg">
+            <h6 class="footerLinksTexts">GitHub</h6></a>
+        
+
+            <div id="footerLogoDiv">
+                <img src="/images/logo.png" alt="" id="footerLogoImg">
+                <h4 id="footerTagline">Your Medical Assistant</h4>
+            </div>
+    </div>
+
+</body>
+</html>

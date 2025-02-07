@@ -6,7 +6,9 @@ const userData = mongoose.Schema({
     name: String,
     institute: String,
     field: String,
-    city: String
+    city: String,
+    language: String,
+    experience: String
 })
 
 module.exports = mongoose.model("doctor", userData);

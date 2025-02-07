@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediswift: Home</title>
+    <link rel="stylesheet" href="/stylesheets/appointment.css">
+
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+
+    
+</head>
+<body>
+    <div id="headerDiv">
+
+        <div id="headerLogoDiv">
+            <a href="/" id="headerLogoAnchor">
+                <img src="/images/logo.png" alt="" id="headerLogoImg">
+            </a>
+        </div>
+
+        <div id="headerCentralDiv">
+            <a href="" class="headerCentralButtons">Pharmacy</a>
+            <a href="/book" class="headerCentralButtons" id="findDoctorButton">Find a Doctor</a>
+        </div>
+        
+        <div id="loginDiv">
+            <%if(firstName != ''){%>
+                <h3 id="welcomeText">Welcome, <%=firstName%></h3>
+                <a href="/logout" id="logoutAnchor">
+                    <img src="/images/logoutIcon.png" alt="" id="logoutImg">
+                </a>
+                <%}else{%>
+                    <a href="/login" class="login_signup_btn">Login</a>
+                    <a href="/signup" class="login_signup_btn">Sign Up</a>
+                    <%}%>
+        </div>
+
+    </div>
+
+    <div id="bodyDiv">
+        <!-- <div id="imageDiv">
+            <img src="/images/dhruvImg.png" alt="" id="doctorImageMain">
+        </div> -->
+        <div id="contentDiv">
+            <h2 class="doctorTextMain">Book Appointment</h2>
+            <h2 id="doctorNameMain" class="doctorTextMain"><%=doctorData["name"]%></h2>
+            <!-- name institute field city experience years language profule image brrief -->
+
+           <form action="" id="appointmentForm">
+        <input type="text" id="patientName" name="patientName" placeholder="Patient Name">
+
+        <input type="number" name="age" id="patientAge" placeholder="Age">
+
+        <select id="patientGender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <div>
+            <input type="checkbox" id="slot1" class="timeslots" name="timeslots" value="9:00 AM - 10:00 AM">
+            <label for="slot1" class="timeslotsLabels">9:00 AM - 10:00 AM</label>
+        </div>
+        <div>
+            <input type="checkbox" id="slot2" class="timeslots" name="timeslots" value="10:00 AM - 11:00 AM">
+            <label for="slot2" class="timeslotsLabels">10:00 AM - 11:00 AM</label>
+        </div>
+        <div>
+            <input type="checkbox" id="slot3" class="timeslots" name="timeslots" value="11:00 AM - 12:00 PM">
+            <label for="slot3" class="timeslotsLabels">11:00 AM - 12:00 PM</label>
+        </div>
+        <div>
+            <input type="checkbox" id="slot4" class="timeslots" name="timeslots" value="1:00 PM - 2:00 PM">
+            <label for="slot4" class="timeslotsLabels">1:00 PM - 2:00 PM</label>
+        </div>
+        <div>
+            <input type="checkbox" id="slot5" class="timeslots" name="timeslots" value="2:00 PM - 3:00 PM">
+            <label for="slot5" class="timeslotsLabels">2:00 PM - 3:00 PM</label>
+        </div>
+
+        <input type="text" name="patientDesc" id="patientDesc" placeholder="Brief Description of Problems">
+
+        <button type="submit" id="bookButton">Book Appointment</button>
+
+           </form>
+
+        </div>
+
+    </div>
+
+   
+
+
+
+    <div id="footerDiv">
+        <a href="" class="footerLinks">
+            <img src="/images/phoneImg.png" alt="" id="phoneImgLogo">
+            <h6 class="footerLinksTexts">Contact Us</h6></a>
+        <a href="" class="footerLinks"><img src="/images/linkedinImg.png" id="linkedinImg">
+            <h6 class="footerLinksTexts">Linked In</h6></a>
+        <a href="" class="footerLinks"><img src="/images/githubLogoImg.png" id="githubImg">
+            <h6 class="footerLinksTexts">GitHub</h6></a>
+        
+
+            <div id="footerLogoDiv">
+                <img src="/images/logo.png" alt="" id="footerLogoImg">
+                <h4 id="footerTagline">Your Medical Assistant</h4>
+            </div>
+    </div>
+
+</body>
+</html>
