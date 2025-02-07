@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mediswift: Home</title>
+    <link rel="stylesheet" href="/stylesheets/pharmacy.css" />
+
+    <link rel="icon" type="image/x-icon" href="/images/logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div id="headerDiv">
+      <div id="headerLogoDiv">
+        <a href="/" id="headerLogoAnchor">
+          <img src="/images/logo.png" alt="" id="headerLogoImg" />
+        </a>
+      </div>
+
+      
+      <div id="headerCentralDiv">
+        <a href="/mycart" id="cartButton"><i class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+
+
+
+      
+
+
+
+
+
+
+
+      <div id="loginDiv">
+
+        
+
+        <%if(firstName != ''){%>
+        <h3 id="welcomeText">Welcome, <%=firstName%></h3>
+        <a href="/logout" id="logoutAnchor">
+          <img src="/images/logoutIcon.png" alt="" id="logoutImg" />
+        </a>
+        <%}else{%>
+        <a href="/login" class="login_signup_btn">Login</a>
+        <a href="/signup" class="login_signup_btn">Sign Up</a>
+        <%}%>
+      </div>
+    </div>
+    
+
+    <div id="shoppingDiv">
+        
+        <div id="shoppingCardsDiv">
+            <!-- <div class="shoppingCard">
+              <img src="/images/burnolImg.jpg" alt="" class="itemImage">
+              <h5 class="priceTag">₹79</h5>
+              <h2 class="itemTitle">Burnol</h2>
+              <button class="addToCartButton">Add to Cart</button>
+            </div>
+
+            
+
+            <div class="shoppingCard">
+              <img src="/images/paracetamol.png" alt="" class="itemImage">
+              <h5 class="priceTag">₹299</h5>
+              <h2 class="itemTitle">Paracetamol</h2>
+              <button class="addToCartButton">Add to Cart</button>
+            </div>
+
+            <div class="shoppingCard">
+              <img src="/images/benadryl.jpg" alt="" class="itemImage">
+              <h5 class="priceTag">₹149</h5>
+              <h2 class="itemTitle">Benadryl</h2>
+              <button class="addToCartButton">Add to Cart</button>
+            </div>
+
+            <div class="shoppingCard">
+              <img src="/images/vicks.jpg" alt="" class="itemImage">
+              <h5 class="priceTag">₹99999</h5>
+              <h2 class="itemTitle">Vicks</h2>
+              <button class="addToCartButton">Add to Cart</button>
+            </div> -->
+
+            <%for (item of productData){%>
+              <div class="shoppingCard">
+                <img src="/images/vicks.jpg" alt="" class="itemImage">
+                <h5 class="priceTag">₹<%=item["price"]%></h5>
+                <h2 class="itemTitle"><%=item["name"]%></h2>
+                <form action="/addToCart/<%=item._id%>" method="post">
+
+                  <button type="submit" class="addToCartButton">Add to Cart</button>
+
+                </form>
+              </div>
+              <%}%>
+            
+
+        </div>
+
+
+    </div>
+
+    <div id="footerDiv">
+      <a href="" class="footerLinks">
+        <img src="/images/phoneImg.png" alt="" id="phoneImgLogo" />
+        <h6 class="footerLinksTexts">Contact Us</h6></a
+      >
+      <a href="" class="footerLinks"
+        ><img src="/images/linkedinImg.png" id="linkedinImg" />
+        <h6 class="footerLinksTexts">Linked In</h6></a
+      >
+      <a href="" class="footerLinks"
+        ><img src="/images/githubLogoImg.png" id="githubImg" />
+        <h6 class="footerLinksTexts">GitHub</h6></a
+      >
+
+      <div id="footerLogoDiv">
+        <img src="/images/logo.png" alt="" id="footerLogoImg" />
+        <h4 id="footerTagline">Your Medical Assistant</h4>
+      </div>
+    </div>
+  </body>
+</html>

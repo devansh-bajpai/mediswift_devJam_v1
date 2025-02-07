@@ -1,0 +1,389 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: #daebe8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#headerBoxDiv {
+    background-color: #87bdd8;
+    /* background-color: green; */
+    height: 200px;
+    width: 800px;
+    margin-top: 10px;
+    border-radius: 10px 10px 0px 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#headerLogoImage {
+    height: 100px;
+    width: 100px;
+
+}
+
+#headerBoxText {
+    font-family: "Josefin Sans";
+    font-size: 50px;
+    color: rgb(68, 74, 108);
+}
+
+#chatWindowDiv {
+    height: 450px;
+    width: 800px;
+    border-radius: 0px 0px 15px 15px;
+    /* background-color: #87bdd8; */
+    background-color: #87bdd8;
+    /* background-color: green; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#chatForm {
+    /* background-color: pink; */
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#mainChatWindow {
+    height: 450px;
+    width: 700px;
+    background-color: #5b9cbd;
+    border-radius: 10px 10px 0px 0px;
+    
+    overflow: scroll;
+    overflow-x: hidden; 
+
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    /* padding: 50px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sentMessageDiv {
+    min-height: 60px;
+    width: 700px;
+    /* background-color: green; */
+
+    display: flex;
+    justify-content: right;
+
+    margin-bottom: 10px;
+    /* border-radius: 10px 0px 0px 10px; */
+}
+
+.sentMessage {
+    /* min-height: 10px;     */
+    max-width: 400px;
+    background-color: rgba(60, 157, 33, 0.632);
+
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    border-radius: 10px 0px 0px 10px;
+
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    overflow-wrap: break-word;
+}
+
+
+
+.receivedMessageDiv {
+    min-height: 60px;
+    width: 700px;
+    /* background-color: green; */
+
+    display: flex;
+    justify-content: left;
+
+    
+    /* border-radius: 10px 0px 0px 10px; */
+    margin-bottom: 10px;
+}
+
+.receivedMessage {
+    /* min-height: 10px;     */
+    max-width: 400px;
+    /* background-color: rgba(255, 255, 255, 0.632); */
+    background-color: rgb(95, 95, 95);
+
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    border-radius: 0px 10px 10px 0px;
+
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    overflow-wrap: break-word;
+}
+
+.messageText {
+    font-size: 18px;
+    font-family: "Josefin Sans";
+    /* overflow-wrap: break-word; */
+    color: white;
+}
+
+#messageBoxInput {
+    height: 60px;
+    width: 610px;
+    border-radius: 0px 0px 0px 10px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#sendButton {
+    height: 60px;
+     width: 90px;
+     border-radius: 0px 0px 10px 0px;
+     outline: none;
+     border: none;
+     font-family: "Josefin Sans";
+     font-size: 20px;
+     background-color: #008cff;
+     color: white;
+
+}
+
+
+#footerDiv {
+    width: 100%;
+    height: 100px;
+    background-color: #75b1cd8e;
+    margin-top: 30px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .footerLinks {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 5px;
+  
+    display: flex;
+  }
+  
+  #githubLogo {
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+  }
+  
+  #linkedinLogo {
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+  }
+
+
+  @media only screen and (max-width: 850px){
+
+    
+#headerBoxDiv {
+    width: 600px;
+}
+
+#headerLogoImage {
+    height: 80px;
+    width: 80px;
+
+}
+
+#headerBoxText {
+    font-size: 40px;
+}
+
+#chatWindowDiv {
+    width: 600px;
+}
+
+#chatForm {
+    /* background-color: pink; */
+    width: 550px;
+}
+
+#mainChatWindow {
+    height: 450px;
+    width: 550px;
+}
+
+.sentMessageDiv {
+    min-height: 60px;
+    width: 550px;
+}
+
+.sentMessage {
+    /* min-height: 10px;     */
+    max-width: 300px;
+}
+
+
+
+.receivedMessageDiv {
+    min-height: 60px;
+    width: 550px;
+}
+
+.receivedMessage {
+    max-width: 300px;
+}
+
+.messageText {
+    font-size: 18px;
+    font-family: "Josefin Sans";
+    /* overflow-wrap: break-word; */
+    color: white;
+}
+
+#messageBoxInput {
+    height: 60px;
+    width: 610px;
+    border-radius: 0px 0px 0px 10px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#sendButton {
+    height: 60px;
+     width: 90px;
+     border-radius: 0px 0px 10px 0px;
+     outline: none;
+     border: none;
+     font-family: "Josefin Sans";
+     font-size: 20px;
+     background-color: #008cff;
+     color: white;
+
+}
+
+  }
+
+
+
+
+
+
+
+  @media only screen and (max-width: 660px){
+
+    
+    #headerBoxDiv {
+        width: 350px;
+        height: 120px;
+    }
+    
+    #headerLogoImage {
+        height: 70px;
+        width: 70px;
+    
+    }
+    
+    #headerBoxText {
+        font-size: 35px;
+    }
+    
+    #chatWindowDiv {
+        width: 350px;
+    }
+    
+    #chatForm {
+        /* background-color: pink; */
+        width: 300px;
+    }
+    
+    #mainChatWindow {
+        height: 450px;
+        width: 300px;
+    }
+    
+    .sentMessageDiv {
+        min-height: 60px;
+        width: 300px;
+    }
+    
+    .sentMessage {
+        /* min-height: 10px;     */
+        max-width: 200px;
+    }
+    
+    
+    
+    .receivedMessageDiv {
+        min-height: 60px;
+        width: 300px;
+    }
+    
+    .receivedMessage {
+        max-width: 200px;
+    }
+    
+    .messageText {
+        font-size: 18px;
+        font-family: "Josefin Sans";
+        /* overflow-wrap: break-word; */
+        color: white;
+    }
+    
+    #messageBoxInput {
+        height: 60px;
+        width: 210px;
+        border-radius: 0px 0px 0px 10px;
+        border: none;
+        outline: none;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    #sendButton {
+        height: 60px;
+         width: 100px;
+         border-radius: 0px 0px 10px 0px;
+         outline: none;
+         border: none;
+         font-family: "Josefin Sans";
+         font-size: 20px;
+         background-color: #008cff;
+         color: white;
+    
+    }
+    
+      }

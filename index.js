@@ -23,13 +23,13 @@ app.use(cookieParser());
 
 const user = require('./models/user.js');
 const doctor = require('./models/doctor.js');
-
-
+const product = require('./models/product.js');
 
 
 
 
 const nodemailer = require("nodemailer");
+const cartdata = require('./models/cartdata.js');
 
 const transporter = nodemailer.createTransport({
     service: "gmail", // or use SMTP settings
@@ -305,5 +305,114 @@ app.post('/submit/appointment', async(req, res) => {
     res.render('appointmentConfirmation');
 })
 
+
+app.get('/usersideSamvaad/:id', (req, res) => {
+    res.render('usersideSamvaad');
+})
+
+app.get('/contactUs', (req, res) => {
+    res.render('contactUs');
+})
+
+app.get('/pharmacy', async (req, res) => {
+    let productData = await product.find();
+    
+    try {
+        const decoded = jwt.verify(req.cookies.token, "testKey");
+        let userData = await user.findOne({email: decoded['email']});
+        let firstName = userData.name.split(' ')[0];
+
+        let userCartData = await cartdata.findOne({email: decoded['email']});
+        // console.log(userCartData["items"].length);
+        // if(userCartData["items"].length > 0){
+        //     console.log(userCartData["items"].length);
+        // }
+
+        res.render('pharmacy', {firstName, productData});
+    } catch (err) {
+        // console.error("Invalid token", err);
+        // res.redirect('/');
+
+        // res.render('doctors', {firstName: ""});
+        res.redirect('/login');
+    }
+
+})
+
+app.post('/addToCart/:itemID', async (req, res) => {
+    try {
+        const decoded = jwt.verify(req.cookies.token, "testKey");
+        let userData = await user.findOne({email: decoded['email']});
+        let firstName = userData.name.split(' ')[0];
+
+        // res.render('pharmacy', {firstName, productData});
+        let userCartData = await cartdata.findOne({email: decoded['email']});
+        if (!userCartData){
+            let cartData = cartdata.create({
+                email: decoded["email"],
+                items: [req.params.itemID]
+            })
+        }
+        else {
+            await cartdata.updateOne(
+                { email: decoded['email'] }, // Find by product name
+                { $push: { items: [req.params.itemID] } } // Append new price to the array
+            );
+        }
+        res.redirect('/pharmacy');
+
+    } catch (err) {
+        console.error("Invalid token", err);
+        // res.redirect('/');
+
+        // res.render('doctors', {firstName: ""});
+        res.redirect('/login');
+    }
+})
+
+
+app.get('/mycart', async (req, res) => {
+
+
+    try {
+        const decoded = jwt.verify(req.cookies.token, "testKey");
+        let userData = await user.findOne({email: decoded['email']});
+        let firstName = userData.name.split(' ')[0];
+
+        // res.render('pharmacy', {firstName, productData});
+        let userCartData = await cartdata.find({email: decoded['email']});
+        // console.log(userCartData);
+        let itemArray = userCartData[0]["items"];
+        // console.log(itemArray);
+        let itemDataArray = [];
+        // console.log(itemArray.length);
+        // itemArray.forEach( async (item) => {
+        //     let itemData = await product.findOne({_id: item});
+        //     // console.log(itemData);
+        //     itemDataArray.push("hi");
+        // })
+
+        for (item of itemArray){
+            let itemData = await product.findOne({_id: item});
+            // console.log(itemData);
+            itemDataArray.push(itemData);
+        }
+
+        // console.log(itemDataArray);
+        
+        res.render('mycart', {firstName, itemDataArray});
+
+    } catch (err) {
+        // console.error("Invalid token", err);
+        // res.redirect('/');
+
+        // res.render('doctors', {firstName: ""});
+        res.redirect('/login');
+    }
+
+
+
+
+})
 
 app.listen(3000);
