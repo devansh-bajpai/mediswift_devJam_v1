@@ -1,66 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mediswift: Home</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
 
-    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="icon" type="image/x-icon" href="/images/logo.png" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-
-
-    
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div id="headerDiv">
+      <div id="headerLogoDiv">
+        <a href="/" id="headerLogoAnchor">
+          <img src="/images/logo.png" alt="" id="headerLogoImg" />
+        </a>
+      </div>
 
-        <div id="headerLogoDiv">
-            <a href="/" id="headerLogoAnchor">
-                <img src="/images/logo.png" alt="" id="headerLogoImg">
-            </a>
-        </div>
+      <div id="headerCentralDiv">
+        <a href="" class="headerCentralButtons">Pharmacy</a>
+        <a href="/book" class="headerCentralButtons" id="findDoctorButton"
+          >Find a Doctor</a
+        >
+      </div>
 
-        <div id="headerCentralDiv">
-            <a href="" class="headerCentralButtons">Pharmacy</a>
-            <a href="/book" class="headerCentralButtons" id="findDoctorButton">Find a Doctor</a>
-        </div>
-        
-        <div id="loginDiv">
-            <%if(firstName != ''){%>
-                <h3 id="welcomeText">Welcome, <%=firstName%></h3>
-                <a href="/logout" id="logoutAnchor">
-                    <img src="/images/logoutIcon.png" alt="" id="logoutImg">
-                </a>
-                <%}else{%>
-                    <a href="/login" class="login_signup_btn">Login</a>
-                    <a href="/signup" class="login_signup_btn">Sign Up</a>
-                    <%}%>
-        </div>
-
+      <div id="loginDiv">
+        <%if(firstName != ''){%>
+        <h3 id="welcomeText">Welcome, <%=firstName%></h3>
+        <a href="/logout" id="logoutAnchor">
+          <img src="/images/logoutIcon.png" alt="" id="logoutImg" />
+        </a>
+        <%}else{%>
+        <a href="/login" class="login_signup_btn">Login</a>
+        <a href="/signup" class="login_signup_btn">Sign Up</a>
+        <%}%>
+      </div>
     </div>
-
-
+    <div class="biggerdiv">
+      <div class="contentdivs">
+        <h3 class="header">Find a Doctor Now</h3>
+        <br />
+        <p class="divcontent">
+          <img src="/images/location.png" class="ImageHomePage" /> Instantly
+          locate top rated doctors nearby with real time geolocation.Choose a
+          Doctor with a particular specialisation field.Quick and easy!
+        </p>
+      </div>
+      <div class="contentdivs">
+        <h3 class="header">Browse Verified Doctors!</h3>
+        <br />
+        <p class="divcontent">
+          <img src="/images/doctorpng.png" class="ImageHomePage" /> Check Doctor
+          qualifications,alma mater,and reviews.Make informed healthcare
+          decisions.Don't lose your opportunity to avail the best doctor.
+        </p>
+      </div>
+      <div class="contentdivs">
+        <h3 class="header">Book an Appointment</h3>
+        <br />
+        <p class="divcontent">
+          <img src="/images/calendarpng.avif" class="ImageHomePage" /> Book
+          Doctors appointments instantly with zero hassle.Choose your time,
+          hurry up,get confirmed to get the best service!
+        </p>
+      </div>
+      <div class="contentdivs">
+        <h3 class="header">
+          Start an Online<br />
+          Consultation!
+        </h3>
+        <br />
+        <p class="divcontent">
+          <img src="/images/diagnospng.jpeg" class="ImageHomePage" /> Get expert
+          medical advice via online text consultations--anytime,anywhere with
+          top-notch treatment.
+        </p>
+      </div>
+    </div>
 
     <div id="footerDiv">
-        <a href="" class="footerLinks">
-            <img src="/images/phoneImg.png" alt="" id="phoneImgLogo">
-            <h6 class="footerLinksTexts">Contact Us</h6></a>
-        <a href="" class="footerLinks"><img src="/images/linkedinImg.png" id="linkedinImg">
-            <h6 class="footerLinksTexts">Linked In</h6></a>
-        <a href="" class="footerLinks"><img src="/images/githubLogoImg.png" id="githubImg">
-            <h6 class="footerLinksTexts">GitHub</h6></a>
-        
+      <a href="" class="footerLinks">
+        <img src="/images/phoneImg.png" alt="" id="phoneImgLogo" />
+        <h6 class="footerLinksTexts">Contact Us</h6></a
+      >
+      <a href="" class="footerLinks"
+        ><img src="/images/linkedinImg.png" id="linkedinImg" />
+        <h6 class="footerLinksTexts">Linked In</h6></a
+      >
+      <a href="" class="footerLinks"
+        ><img src="/images/githubLogoImg.png" id="githubImg" />
+        <h6 class="footerLinksTexts">GitHub</h6></a
+      >
 
-            <div id="footerLogoDiv">
-                <img src="/images/logo.png" alt="" id="footerLogoImg">
-                <h4 id="footerTagline">Your Medical Assistant</h4>
-            </div>
+      <div id="footerLogoDiv">
+        <img src="/images/logo.png" alt="" id="footerLogoImg" />
+        <h4 id="footerTagline">Your Medical Assistant</h4>
+      </div>
     </div>
-
-</body>
+  </body>
 </html>
