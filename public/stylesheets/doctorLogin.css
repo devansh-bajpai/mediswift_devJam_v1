@@ -1,0 +1,319 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-image: url('/images/mainBg.png');
+    background-size: cover;
+    
+}
+#bodydiv
+{
+    box-sizing: border-box;
+     /* font-family: 'Poppins', sans-serif; */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#headerDiv {
+    height:70px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.201);
+    /* opacity: 30%; */
+    display: flex;
+}
+
+#headerLogoDiv {
+    height: 65px;
+    /* width: 100px; */
+    width: 6.5%;
+    /* background-color: pink; */
+    margin: 2.5px 0px 0px 5px;
+
+}
+
+/*#headerCentralDiv {
+    height: 65px;
+    /* width: 1200px; */
+    
+    /* background-color: pink; 
+    margin: 2.5px 0px 0px 5px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    padding-right: 100px;
+}*/
+
+/*#loginDiv {
+    height: 65px;
+    /* width: 220px; */
+    
+    /* background-color: pink; 
+    margin: 2.5px 0px 0px 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+/*.login_signup_btn {
+    height: 50px;
+    /* width: 100px; 
+    width: 45%;
+    background-color: rgb(54, 138, 248);
+    border-radius: 7px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}*/
+
+
+/*.headerCentralButtons {
+    /* height: 55px; */
+    /* background-color: rgb(54, 138, 248); 
+    border-radius: 7px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px 10px 0px 10px;
+}*/
+
+#findDoctorButton {
+    width: 130px;
+
+}
+
+#headerLogoAnchor {
+    height: 65px;
+    width: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#headerLogoImg {
+    height: 60px;
+}
+.glass-container {
+    width: 400px;
+    height: 450px;
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 1px solid #fff;
+}
+
+.glass-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+.login-box {
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    color: #fff;
+    margin-top:40px;
+    margin-bottom: -20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+#username{
+    height:50px;
+    width:100%;
+    padding-right: 5px;
+}
+#password{
+    height:50px;
+    width:100%;
+    padding-right: 5px;
+}
+input {
+    padding: 10px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid #fff;
+    font-family: "Exo 2";
+    color: #fff;
+    font-size: 15px;
+}
+input::placeholder {
+    color: #fff;
+}
+
+input:focus {
+    outline: none;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 12px;
+    color: white;
+}
+
+.options input {
+    margin-right: 5px;
+    margin-top: 0px;
+}
+
+.options a {
+    text-decoration: none;
+    color: white;
+    margin-left: auto;
+}
+
+button {
+    background: #fff;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+button:hover {
+    background: transparent;
+    color: white;
+    outline: 1px solid #fff;
+}
+
+p {
+    font-size: 12px;
+    color: #fff;
+    margin-top: 15px;
+}
+
+#register {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+/* added by dhruv*/
+
+#footerDiv
+{
+    width:100%;
+    height:250px;
+
+    display:flex;
+    flex-direction:column;
+    background-color: rgba(0,0,0,0.201);
+    justify-content:center;
+    align-items:center;
+    border-spacing: space-between;
+
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.footerLinks {
+    text-decoration: none;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:8px;
+}
+
+#phoneImgLogo {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+#linkedinImg
+{
+    height:30px;
+    width:30px;
+    margin-right:10px;
+}
+#githubImg
+{
+    height:30px;
+    width:30px;
+    margin-right:10px;
+}
+
+#footerLinksTexts {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#footerLogoDiv {
+    width: 100%;
+    height: 100px; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#footerLogoImg {
+    height: 80px;
+    width: 80px;
+}
+
+#footerTagline {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin-left: 10px;
+}
+
+
+/* Added by devansh (dynamic) */
+#dynamicErrors {
+    width: 100%;
+    margin-top: 10px;
+    /* background-color: red; */
+    color: rgb(255, 44, 44);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+
+.errorTexts {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: red;
+    font-size: 16px;
+}
