@@ -3,6 +3,61 @@
     padding: 0%;
 }
 
+ 
+
+        .biggerdiv {
+            width: 100%;
+            height:500px;
+            margin: 50px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            background-color: #ebeced;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contentdivs {
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 18px;
+            margin: 10px;
+            flex-direction:column;
+        }
+        .header
+        {
+    
+         color:black;
+         justify-content:first baseline;
+         font-family:Verdana, Geneva, Tahoma, sans-serif;
+         text-align:center;
+         padding-top:5px;
+         position:relative;
+         margin-bottom:20px;
+        }
+       p{
+            text-align:center;
+            color:black;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        img{
+            width:20px;
+            height:20px;
+        }
+
+
+
+
+
 body {
     background-image: url('/images/newBg.png');
     background-size: cover;
