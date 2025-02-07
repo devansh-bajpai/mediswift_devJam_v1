@@ -53,10 +53,10 @@
             <h2 id="doctorNameMain" class="doctorTextMain"><%=doctorData["name"]%></h2>
             <!-- name institute field city experience years language profule image brrief -->
 
-           <form action="" id="appointmentForm">
-        <input type="text" id="patientName" name="patientName" placeholder="Patient Name">
+           <form action="/submit/appointment" method="POST" id="appointmentForm">
+        <input type="text" id="patientName" name="patientName" placeholder="Patient Name" required>
 
-        <input type="number" name="age" id="patientAge" placeholder="Age">
+        <input type="number" name="age" id="patientAge" placeholder="Age" required>
 
         <select id="patientGender" name="gender" required>
             <option value="male">Male</option>
@@ -84,10 +84,10 @@
             <label for="slot5" class="timeslotsLabels">2:00 PM - 3:00 PM</label>
         </div>
 
-        <input type="text" name="patientDesc" id="patientDesc" placeholder="Brief Description of Problems">
+        <input type="text" name="patientDesc" id="patientDesc" placeholder="Brief Description of Problems" required>
 
         <button type="submit" id="bookButton">Book Appointment</button>
-
+                
            </form>
 
         </div>

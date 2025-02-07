@@ -24,6 +24,36 @@ app.use(cookieParser());
 const user = require('./models/user.js');
 const doctor = require('./models/doctor.js');
 
+
+
+
+
+
+const nodemailer = require("nodemailer");
+
+const transporter = nodemailer.createTransport({
+    service: "gmail", // or use SMTP settings
+    auth: {
+        user: "mediswift.devjam@gmail.com",
+        // pass: "mediswiftCoolCoders591"
+        pass: "jlem bbpb yvso kigf"
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const all_errors_nulled = {account_exist: null, right_pass: null, signupSuccess: null, already_exists: null, passLen_error: null, notconfirm_pass: null};
 
 let generateError = (e, setVal) => {
@@ -35,6 +65,14 @@ let generateError = (e, setVal) => {
 
 app.get('/', async (req, res) => {
     // console.log(req.cookies.token);
+
+    // transporter.sendMail(mailOptions, (error, info) => {
+    //     if (error) {
+    //         console.log("Error:", error);
+    //     } else {
+    //         console.log("Email sent: " + info.response);
+    //     }
+    // });
     
     try {
         const decoded = jwt.verify(req.cookies.token, "testKey");
@@ -235,6 +273,36 @@ app.get('/book/doctor/:id', async(req, res) => {
 
 
 
+})
+
+
+app.post('/submit/appointment', async(req, res) => {
+    const decoded = jwt.verify(req.cookies.token, "testKey");
+
+    let userData = await user.findOne({email: decoded['email']});
+        let firstName = userData.name.split(' ')[0];
+
+    // console.log(decoded);
+
+    // console.log(req.body);
+
+    const mailOptions = {
+        from: "mediswift.devjam@gmail.com",
+        to: decoded.email,
+        subject: "Appointment Confirmation",
+        text: `Dear ${req.body.patientName}\nYour Appointment has been Successfully Scheduled!`
+    };
+
+
+    // transporter.sendMail(mailOptions, (error, info) => {
+    //     if (error) {
+    //         console.log("Error:", error);
+    //     } else {
+    //         console.log("Email sent: " + info.response);
+    //     }
+    // });
+
+    res.render('appointmentConfirmation');
 })
 
 
