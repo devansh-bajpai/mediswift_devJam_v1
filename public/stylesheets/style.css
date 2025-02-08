@@ -37,7 +37,7 @@ body {
     justify-content: right;
     align-items: center;
 
-    padding-right: 100px;
+    /* padding-right: 100px; */
 }
 
 #loginDiv {
@@ -209,12 +209,13 @@ body {
 
         .biggerdiv {
             width: 100%;
-            height:500px;
+            /* height:500px; */
             /* margin: 50px auto; */
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             align-items: center;
+            justify-content: center;
             /* padding: 20px; */
             border-radius: 15px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -257,3 +258,34 @@ body {
         }
 
 
+
+@media only screen and (max-width: 500px){
+    .login_signup_btn {
+        height: 50px;
+        /* width: 100px; */
+        width: 100px;
+        background-color: rgb(54, 138, 248);
+        border-radius: 7px;
+        margin-right: 5px;
+        margin-left: 5px;
+    
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        color: white;
+        text-decoration: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    /* .headerCentralButtons {
+        font-size: 10px;
+        background-color: pink;
+        width: 50px;
+    }
+
+    #findDoctorButton {
+        width: 50px;
+    } */
+}
