@@ -290,3 +290,12 @@ body {
         width: 50px;
     } */
 }
+.doctor-auth {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.doctor-auth p {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}

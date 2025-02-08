@@ -229,7 +229,6 @@ app.get('/signup/doctor', (req, res) => {
     res.cookie('token', '');
     res.render('doctorSignup');
 })
-
 app.get('/view/profile/:id',async (req, res) => {
     try {
         const decoded = jwt.verify(req.cookies.token, "testKey");
