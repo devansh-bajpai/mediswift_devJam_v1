@@ -294,13 +294,13 @@ app.post('/submit/appointment', async(req, res) => {
     };
 
 
-    // transporter.sendMail(mailOptions, (error, info) => {
-    //     if (error) {
-    //         console.log("Error:", error);
-    //     } else {
-    //         console.log("Email sent: " + info.response);
-    //     }
-    // });
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log("Error:", error);
+        } else {
+            console.log("Email sent: " + info.response);
+        }
+    });
 
     res.render('appointmentConfirmation');
 })

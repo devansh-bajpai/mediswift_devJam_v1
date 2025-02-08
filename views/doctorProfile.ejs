@@ -46,7 +46,7 @@
 
     <div id="bodyDiv">
         <div id="imageDiv">
-            <img src="/images/dhruvImg.png" alt="" id="doctorImageMain">
+            <img src="/images/doctorImg.png" alt="" id="doctorImageMain">
         </div>
         <div id="contentDiv">
             <h2 id="doctorNameMain" class="doctorTextMain"><%=doctorData["name"]%></h2>
@@ -71,7 +71,12 @@
 
     <div id="bookingDiv">
         <a href="/book/doctor/<%=doctorData["_id"]%>" id="appointmentButton">Book Appointment</a>
-            <a href="/usersideSamvaad/<%=doctorData["_id"]%>" id="consultancyButton">Online Consultancy</a>
+            <!-- <a href="/usersideSamvaad/<%=doctorData["_id"]%>" id="consultancyButton">Online Consultancy</a> -->
+
+
+
+            <!-- THIS IS THE SAMVAAD APP (not yet integrated into this website) -->
+            <a href="https://chatapp-socketio-v1.onrender.com/" id="consultancyButton">Online Consultancy</a>
     </div>
 
 
